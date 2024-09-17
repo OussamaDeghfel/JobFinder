@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const Jobs = () => {
-  const [jobs, setJobs] = useState('')
+  const [jobs, setJobs] = useState(null)
 
   useEffect(() => {
     fetch('../public/jobData.json')
@@ -13,13 +13,14 @@ const Jobs = () => {
 
   return (
     <div className='border-2 border-red-500'>
-      {jobs.map((job: any) => (
+      {jobs?.jobs?.map((job: any) => (
         <div key={job.title}>
           <h1>{job.title}</h1>
           <p>{job.location}</p>
           <p>{job.work_method}</p>
           <p>{job.description}</p>
           <p>{job.salary_range}</p>
+          <span>-----------</span>
         </div>
       ))}
     </div>
