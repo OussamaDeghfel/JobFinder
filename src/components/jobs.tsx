@@ -13,10 +13,15 @@ const Jobs = () => {
   
 
   useEffect(() => {
-    fetch('/jobData.json')
-    .then(response => response.json())
-    .then(data => setJobs(data.data))
-    .catch(error => console.log(error))
+    fetch('./local-Data/jobData.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => setJobs(data))
+      .catch(error => console.log('Fetch error: ', error));
   }, []);
 
   console.log(jobs)
@@ -24,7 +29,7 @@ const Jobs = () => {
  return (
     <div className='border-2 border-red-500'>
       {jobs?.map((job) => (
-        <div>
+        <div key={job.title}>
           <p>{job.title}</p>
           <p>{job.location}</p>
           <p>{job.work_method}</p>
