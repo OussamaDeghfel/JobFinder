@@ -4,7 +4,7 @@ import Filters from './filters'
 
 const NavBar = () => {
   return (
-    <div className='flex flex-col w-full bg-gray-500 p-5 rounded-b-full'>
+    <div className='flex flex-col h-28 w-full bg-blue-500 p-5 rounded-b-full'>
         <div className='flex w-[980px] h-12 justify-between items-center m-auto '>
         <h1 className='text-2xl font-bold text-white'>JobFinder</h1>
         <div className='flex space-x-2'>
@@ -13,7 +13,7 @@ const NavBar = () => {
             <span className=''> <BiMoon size={20} color='white' /> </span>
         </div>
         </div>
-        <div className='  items-center m-auto w-[50%]'>
+        <div className='items-center m-auto'>
             <Filters />
         </div>
     </div>
