@@ -1,26 +1,35 @@
 import { useEffect, useState } from 'react'
 
+interface dataJobType {
+  title: string
+  location: string
+  work_method: string
+  description: string
+  salary_range: string
+}
+
 const Jobs = () => {
-  const [jobs, setJobs] = useState(null)
+  const [jobs, setJobs] = useState<dataJobType[]>([])
+  
 
   useEffect(() => {
-    fetch('../public/jobData.json')
-      .then(response => response.json())
-      .then(jobs => setJobs(jobs))
-      .catch(error => console.error('Error fetching data:', error));
+    fetch('/jobData.json')
+    .then(response => response.json())
+    .then(data => setJobs(data.data))
+    .catch(error => console.log(error))
   }, []);
+
   console.log(jobs)
 
-  return (
+ return (
     <div className='border-2 border-red-500'>
-      {jobs?.jobs?.map((job: any) => (
-        <div key={job.title}>
-          <h1>{job.title}</h1>
+      {jobs?.map((job) => (
+        <div>
+          <p>{job.title}</p>
           <p>{job.location}</p>
           <p>{job.work_method}</p>
           <p>{job.description}</p>
           <p>{job.salary_range}</p>
-          <span>-----------</span>
         </div>
       ))}
     </div>
