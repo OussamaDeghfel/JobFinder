@@ -13,7 +13,7 @@ const Jobs = () => {
   
 
   useEffect(() => {
-    fetch('./local-Data/jobData.json')
+    fetch('././jobData.json')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
