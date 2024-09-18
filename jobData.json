@@ -1,144 +1,217 @@
 [
       {
+        "id": 1,
         "title": "Frontend Developer",
         "location": "New York, USA",
         "work_method": "Full-time",
         "description": "Responsible for developing and designing user interfaces for web applications.",
-        "salary_range": "$70,000 - $90,000"
+        "time_posted": "2023-08-12T14:00:00.000Z"
       },
       {
+        "id": 2,
         "title": "Graphic Designer",
         "location": "Remote",
         "work_method": "Part-time",
         "description": "Designing marketing materials and website graphics for various projects.",
-        "salary_range": "$20,000 - $40,000"
+        "time_posted": "2023-08-12T14:30:00.000Z"
       },
       {
+        "id": 3,
         "title": "Content Writer",
         "location": "London, UK",
         "work_method": "Full-time",
         "description": "Creating written content for websites, blogs, and social media platforms.",
-        "salary_range": "£30,000 - £40,000"
+        "time_posted": "2023-08-12T15:00:00.000Z"
       },
       {
+        "id": 4,
         "title": "Backend Developer",
         "location": "Berlin, Germany",
         "work_method": "Full-time",
         "description": "Develop and maintain server-side applications, databases, and APIs.",
-        "salary_range": "€60,000 - €80,000"
+        "time_posted": "2023-08-12T15:30:00.000Z"
       },
       {
+        "id": 5,
         "title": "SEO Specialist",
         "location": "Toronto, Canada",
         "work_method": "Part-time",
         "description": "Optimizing website content to rank higher in search engines and increase traffic.",
-        "salary_range": "CA$25,000 - CA$50,000"
+        "time_posted": "2023-08-12T16:00:00.000Z"
       },
       {
+        "id": 6,
         "title": "Project Manager",
         "location": "Paris, France",
         "work_method": "Full-time",
         "description": "Managing web development projects, coordinating teams, and delivering on time.",
-        "salary_range": "€70,000 - €90,000"
+        "time_posted": "2023-08-12T16:30:00.000Z"
       },
       {
+        "id": 7,
         "title": "Data Analyst",
         "location": "Remote",
         "work_method": "Full-time",
         "description": "Analyze datasets to extract actionable insights and support decision-making.",
-        "salary_range": "$50,000 - $70,000"
+        "time_posted": "2023-08-12T17:00:00.000Z"
       },
       {
+        "id": 8,
         "title": "UX/UI Designer",
         "location": "San Francisco, USA",
         "work_method": "Part-time",
         "description": "Designing user-friendly interfaces for mobile and web applications.",
-        "salary_range": "$80,000 - $100,000"
+        "time_posted": "2023-08-12T17:30:00.000Z"
       },
       {
+        "id": 9,
         "title": "Marketing Manager",
         "location": "Sydney, Australia",
         "work_method": "Full-time",
         "description": "Leading marketing campaigns and managing the marketing team.",
-        "salary_range": "AU$80,000 - AU$100,000"
+        "time_posted": "2023-08-12T18:00:00.000Z"
       },
       {
+        "id": 10,
         "title": "Social Media Manager",
         "location": "Remote",
         "work_method": "Part-time",
         "description": "Managing social media accounts and creating content strategies for clients.",
-        "salary_range": "$35,000 - $50,000"
+        "time_posted": "2023-08-12T18:30:00.000Z"
       },
       {
+        "id": 11,
         "title": "DevOps Engineer",
         "location": "Tokyo, Japan",
         "work_method": "Full-time",
         "description": "Managing and automating software development and deployment processes.",
-        "salary_range": "¥7,000,000 - ¥10,000,000"
+        "time_posted": "2023-08-12T19:00:00.000Z"
       },
       {
+        "id": 12,
         "title": "Customer Support Representative",
         "location": "Mumbai, India",
         "work_method": "Part-time",
         "description": "Assisting customers via email, phone, or chat and solving product issues.",
-        "salary_range": "₹300,000 - ₹500,000"
+        "time_posted": "2023-08-12T19:30:00.000Z"
       },
       {
+        "id": 13,
         "title": "Product Manager",
         "location": "Los Angeles, USA",
         "work_method": "Full-time",
         "description": "Overseeing the development and launch of new products.",
-        "salary_range": "$90,000 - $120,000"
+        "time_posted": "2023-08-12T20:00:00.000Z"
       },
       {
+        "id": 14,
         "title": "HR Coordinator",
         "location": "Remote",
         "work_method": "Part-time",
         "description": "Assisting in recruitment processes and maintaining employee records.",
-        "salary_range": "$40,000 - $60,000"
+        "time_posted": "2023-08-12T20:30:00.000Z"
       },
       {
+        "id": 15,
         "title": "Software Tester",
         "location": "Dublin, Ireland",
         "work_method": "Full-time",
         "description": "Testing software for bugs and ensuring high-quality performance.",
-        "salary_range": "€45,000 - €60,000"
+        "time_posted": "2023-08-12T21:00:00.000Z"
       },
       {
+        "id": 16,
         "title": "Sales Executive",
         "location": "Dubai, UAE",
         "work_method": "Full-time",
         "description": "Generating leads and closing sales for products and services.",
-        "salary_range": "AED 100,000 - AED 150,000"
+        "time_posted": "2023-08-12T21:30:00.000Z"
       },
       {
-        "title": "Mobile App Developer",
-        "location": "Remote",
+        "id": 17,
+        "title": "Senior Frontend Developer",
+        "location": "London, UK",
         "work_method": "Full-time",
-        "description": "Developing mobile applications for iOS and Android platforms.",
-        "salary_range": "$75,000 - $95,000"
+        "description": "Responsible for developing and maintaining complex web applications.",
+        "time_posted": "2023-08-12T22:00:00.000Z"
       },
       {
-        "title": "Business Analyst",
-        "location": "Singapore",
+        "id": 18,
+        "title": "UX/UI Designer",
+        "location": "New York, USA",
         "work_method": "Part-time",
-        "description": "Analyzing business operations and recommending improvements.",
-        "salary_range": "SGD 60,000 - SGD 80,000"
+        "description": "Designing user-friendly interfaces for mobile and web applications.",
+        "time_posted": "2023-08-12T22:30:00.000Z"
       },
       {
-        "title": "IT Support Technician",
-        "location": "Melbourne, Australia",
+        "id": 19,
+        "title": "Software Engineer",
+        "location": "Berlin, Germany",
         "work_method": "Full-time",
-        "description": "Providing technical support to staff and troubleshooting IT issues.",
-        "salary_range": "AU$50,000 - AU$70,000"
+        "description": "Developing and maintaining server-side applications, databases, and APIs.",
+        "time_posted": "2023-08-12T23:00:00.000Z"
       },
       {
+        "id": 20,
+        "title": "Junior Frontend Developer",
+        "location": "Remote",
+        "work_method": "Part-time",
+        "description": "Assisting in developing and designing user interfaces for web applications.",
+        "time_posted": "2023-08-12T23:30:00.000Z"
+      },
+      {
+        "id": 21,
+        "title": "QA Engineer",
+        "location": "Tokyo, Japan",
+        "work_method": "Full-time",
+        "description": "Testing software for bugs and ensuring high-quality performance.",
+        "time_posted": "2023-08-13T00:00:00.000Z"
+      },
+      {
+        "id": 22,
         "title": "Digital Marketing Specialist",
-        "location": "Remote",
+        "location": "Sydney, Australia",
+        "work_method": "Full-time",
+        "description": "Developing and executing digital marketing campaigns.",
+        "time_posted": "2023-08-13T00:30:00.000Z"
+      },
+      {
+        "id": 23,
+        "title": "DevOps Engineer",
+        "location": "Mumbai, India",
+        "work_method": "Full-time",
+        "description": "Managing and automating software development and deployment processes.",
+        "time_posted": "2023-08-13T01:00:00.000Z"
+      },
+      {
+        "id": 24,
+        "title": "IT Project Manager",
+        "location": "Paris, France",
+        "work_method": "Full-time",
+        "description": "Managing IT projects, coordinating teams, and delivering on time.",
+        "time_posted": "2023-08-13T01:30:00.000Z"
+      },
+      {
+        "id": 25,
+        "title": "Web Developer",
+        "location": "Toronto, Canada",
         "work_method": "Part-time",
-        "description": "Planning and executing digital marketing campaigns across various platforms.",
-        "salary_range": "$30,000 - $45,000"
+        "description": "Developing and designing user interfaces for web applications.",
+        "time_posted": "2023-08-13T02:00:00.000Z"
+      },
+      {
+        "id": 26,
+        "title": "Data Analyst",
+        "location": "Los Angeles, USA",
+        "work_method": "Full-time",
+        "description": "Analyze datasets to extract actionable insights and support decision-making.",
+        "time_posted": "2023-08-13T02:30:00.000Z"
+      },
+      {
+        "id": 27,
+        "title": "Software Engineer",
+        "location": "Dublin, Ireland",
+        "work_method": "Full-time",
+        "description": "Developing and maintaining server-side applications"
       }
 ]
-
-  
