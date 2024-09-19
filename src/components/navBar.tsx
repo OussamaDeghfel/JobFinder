@@ -13,7 +13,7 @@ const NavBar = () => {
             <span className=''> <BiMoon size={20} color='white' /> </span>
         </div>
         </div>
-        <div className='items-center m-auto'>
+        <div className='flex flex-col items-center m-auto'>
             <Filters />
         </div>
     </div>
