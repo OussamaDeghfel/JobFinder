@@ -3,8 +3,6 @@ import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 import relativeTime from "dayjs/plugin/relativeTime";
 import duration from "dayjs/plugin/duration";
-import utc from "dayjs/plugin/utc";
-import timezone from "dayjs/plugin/timezone";
 
 interface jobData {
   title: string;
@@ -24,18 +22,14 @@ const JobCard = ({
   const [dateAgo, setDateAgo] = useState("");
   dayjs.extend(relativeTime);
   dayjs.extend(duration);
-  dayjs.extend(utc);
-dayjs.extend(timezone);
 
   const ChangeDateFormat = (time_posted: string) => {
     const now = dayjs();
-    const postDate = dayjs(time_posted).tz('UTC');
-    console.log("now", now);
+    const postDate = dayjs(time_posted);
 
     const hoursDifference = now.diff(postDate, "hour");
     const daysDifference = now.diff(postDate, "day");
     const monthsDifference = now.diff(postDate, "month");
-    console.log("hoursDifference", hoursDifference);
 
     let displayTime = "";
 
@@ -53,8 +47,6 @@ dayjs.extend(timezone);
       } ago`;
     }
 
-    // const dateAgoCalucated = dayjs(changeDate).fromNow()
-    // console.log(dateAgoCalucated);
     setDateAgo(displayTime);
   };
 
