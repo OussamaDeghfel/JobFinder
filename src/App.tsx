@@ -1,11 +1,13 @@
 import './App.css'
-import Jobs from './components/jobs'
+// import Jobs from './components/jobs'
+import NavBar from './components/navBar'
 
 function App() {
 
   return (
     <>
-      <Jobs />
+      <NavBar />
+      {/* <Jobs /> */}
     </>
   )
 }
