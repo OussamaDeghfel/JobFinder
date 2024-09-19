@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import JobCard from "./jobCard";
 
 export interface dataJobType {
@@ -9,26 +10,26 @@ export interface dataJobType {
   description: string;
   time_posted: string;
 }
+interface JobsProps {
+  valueSearch?: string
+  jobs?: dataJobType[];
+}
 
-const Jobs = () => {
-  const [jobs, setJobs] = useState<dataJobType[]>([]);
 
-  useEffect(() => {
-    fetch("././jobData.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => setJobs(data))
-      .catch((error) => console.log("Fetch error: ", error));
-  }, []);
+const Jobs:React.FC<JobsProps> = ({ jobs, valueSearch }) => {
 
-  console.log(jobs);
+  useMemo(() => {
+    if (valueSearch) {
+      const filteredJobs = jobs?.filter((job) => {
+        return job.title.toLowerCase().includes(valueSearch.toLowerCase());
+      });
+      jobs = filteredJobs;
+    }
+  },[valueSearch])
 
   return (
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 justify-center place-items-center translate-y-20">
+
       {jobs?.map((job) => (
         <div key={job.id}>
           <JobCard
