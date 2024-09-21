@@ -214,6 +214,78 @@
         "work_method": "Full-time",
         "description": "Developing and maintaining server-side applications",
         "time_posted": "2024-09-03T17:00:00.000Z"
+      },
+      {
+        "id": 28,
+        "title": "Software Engineer",
+        "location": "New York, USA",
+        "work_method": "Full-time",
+        "description": "Developing and maintaining server-side applications",
+        "time_posted": "2024-09-03T17:00:00.000Z"
+      },
+      {
+        "id": 29,
+        "title": "UX/UI Designer",
+        "location": "London, UK",
+        "work_method": "Remote",
+        "description": "Designing user-friendly interfaces for mobile and web applications",
+        "time_posted": "2024-09-03T17:00:00.000Z"
+      },
+      {
+        "id": 30,
+        "title": "Frontend Developer",
+        "location": "Paris, France",
+        "work_method": "Intern",
+        "description": "Developing and designing user interfaces for web applications",
+        "time_posted": "2024-09-03T17:00:00.000Z"
+      },
+      {
+        "id": 31,
+        "title": "Backend Developer",
+        "location": "Tokyo, Japan",
+        "work_method": "Full-time",
+        "description": "Developing and maintaining server-side applications, databases, and APIs",
+        "time_posted": "2024-09-03T17:00:00.000Z"
+      },
+      {
+        "id": 32,
+        "title": "Data Analyst",
+        "location": "Sydney, Australia",
+        "work_method": "Remote",
+        "description": "Analyze datasets to extract actionable insights and support decision-making",
+        "time_posted": "2024-09-03T17:00:00.000Z"
+      },
+      {
+        "id": 33,
+        "title": "DevOps Engineer",
+        "location": "Berlin, Germany",
+        "work_method": "Intern",
+        "description": "Managing and automating software development and deployment processes",
+        "time_posted": "2024-09-03T17:00:00.000Z"
+      },
+      {
+        "id": 34,
+        "title": "Customer Support Representative",
+        "location": "Mumbai, India",
+        "work_method": "Part-time",
+        "description": "Assisting customers via email, phone, or chat and solving product issues",
+        "time_posted": "2024-09-03T17:00:00.000Z"
+      },
+      {
+        "id": 35,
+        "title": "Digital Marketing Specialist",
+        "location": "Los Angeles, USA",
+        "work_method": "Remote",
+        "description": "Developing and executing digital marketing campaigns",
+        "time_posted": "2024-09-03T17:00:00.000Z"
+      },
+      {
+        "id": 36,
+        "title": "QA Engineer",
+        "location": "Dublin, Ireland",
+        "work_method": "Intern",
+        "description": "Testing software for bugs and ensuring high-quality performance",
+        "time_posted": "2024-09-03T17:00:00.000Z"
       }
     ]
 
