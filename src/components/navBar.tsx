@@ -1,6 +1,7 @@
 import { Switch } from 'antd'
 import { BiMoon, BiSun } from 'react-icons/bi'
 import Filters from './filters'
+import ApplyingForm from './applyingForm'
 
 const NavBar = () => {
   return (
@@ -14,7 +15,8 @@ const NavBar = () => {
         </div>
         </div>
         <div className='flex flex-col items-center m-auto'>
-            <Filters />
+            {/* <Filters /> */}
+            <ApplyingForm />
         </div>
     </div>
   )
