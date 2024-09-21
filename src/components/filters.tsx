@@ -1,4 +1,4 @@
-import { Button, Form, Input, Select } from "antd";
+import { Form, Input, Select } from "antd";
 import { useEffect, useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { FaLocationDot } from "react-icons/fa6";
@@ -65,7 +65,7 @@ const Filters = () => {
           <Form.Item className="p-2 ">
             <div>
               <Select
-                defaultValue={"fullTime"}
+                placeholder="Filter By Work Type..."
                 options={[
                   {
                     value: "Full-time",
@@ -75,8 +75,17 @@ const Filters = () => {
                     value: "Part-time",
                     label: "Part Time",
                   },
+                  {
+                    value: "Remote",
+                    label: "Remote",
+                  },
+                  {
+                    value: "Intern",
+                    label: "Intern",
+                  },
                 ]}
                 onChange={handleWorkTypeChange}
+                allowClear
               />
             </div>
           </Form.Item>
