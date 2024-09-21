@@ -22,7 +22,6 @@ const Filters = () => {
   }
 
   // console.log(valueSearch)
-
   useEffect(() => {
     fetch("././jobData.json")
       .then((response) => {
@@ -63,7 +62,7 @@ const Filters = () => {
             />
           </Form.Item>
 
-          <Form.Item className="p-2 border-r-2">
+          <Form.Item className="p-2 ">
             <div>
               <Select
                 defaultValue={"fullTime"}
@@ -82,11 +81,11 @@ const Filters = () => {
             </div>
           </Form.Item>
 
-          <Form.Item className="p-2">
+          {/* <Form.Item className="p-2">
             <Button type="primary" htmlType="submit">
               Search
             </Button>
-          </Form.Item>
+          </Form.Item> */}
         </Form>
       </div>
 
