@@ -13,11 +13,12 @@ export interface dataJobType {
 interface JobsProps {
   titleSearch?: string
   locationSearch?: string
+  workTypeSearch?: string
   jobs?: dataJobType[];
 }
 
 
-const Jobs:React.FC<JobsProps> = ({ jobs, titleSearch, locationSearch }) => {
+const Jobs:React.FC<JobsProps> = ({ jobs, titleSearch, locationSearch, workTypeSearch }) => {
 
   useMemo(() => {
     if (titleSearch) {
@@ -32,7 +33,13 @@ const Jobs:React.FC<JobsProps> = ({ jobs, titleSearch, locationSearch }) => {
       });
       jobs = filteredJobs;
     }
-  },[titleSearch, locationSearch])
+    if (workTypeSearch) {
+      const filteredJobs = jobs?.filter((job) => {
+        return job.work_method.toLowerCase().includes(workTypeSearch.toLowerCase());
+      });
+      jobs = filteredJobs;
+    }
+  },[titleSearch, locationSearch, workTypeSearch])
 
   return (
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 justify-center place-items-center translate-y-20">

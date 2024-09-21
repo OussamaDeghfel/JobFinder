@@ -6,14 +6,19 @@ import Jobs, { dataJobType } from "./jobs";
 
 const Filters = () => {
   const [jobs, setJobs] = useState<dataJobType[]>([]);
-  const [titleSearch, setTitleSearch] = useState<string>("");
-  const [locationSearch, setLocationSearch] = useState<string>("");
+  const [titleSearch, setTitleSearch] = useState<string | undefined>("");
+  const [locationSearch, setLocationSearch] = useState<string | undefined>("");
+  const [workTypeSearch, setWorkTypeSearch] = useState<string | undefined>("");
 
-  const handleTitleChange = (value:string) => {
+  const handleTitleChange = (value?:string) => {
     setTitleSearch(value);
   }
-  const handleLocationChange = (value:string) => {
+  const handleLocationChange = (value?:string) => {
     setLocationSearch(value);
+  }
+  const handleWorkTypeChange = (value?:string) => {
+    console.log(value)
+    setWorkTypeSearch(value);
   }
 
   // console.log(valueSearch)
@@ -64,14 +69,15 @@ const Filters = () => {
                 defaultValue={"fullTime"}
                 options={[
                   {
-                    value: "fullTime",
+                    value: "Full-time",
                     label: "Full Time",
                   },
                   {
-                    value: "partTime",
+                    value: "Part-time",
                     label: "Part Time",
                   },
                 ]}
+                onChange={handleWorkTypeChange}
               />
             </div>
           </Form.Item>
@@ -85,7 +91,7 @@ const Filters = () => {
       </div>
 
       <div>
-        <Jobs jobs={jobs} titleSearch={titleSearch} locationSearch={locationSearch} />
+        <Jobs jobs={jobs} titleSearch={titleSearch} locationSearch={locationSearch} workTypeSearch={workTypeSearch} />
       </div>
     </>
   );
