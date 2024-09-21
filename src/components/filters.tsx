@@ -5,11 +5,15 @@ import { FaLocationDot } from "react-icons/fa6";
 import Jobs, { dataJobType } from "./jobs";
 
 const Filters = () => {
-  const [valueSearch, setValueSearch] = useState<string>("");
   const [jobs, setJobs] = useState<dataJobType[]>([]);
+  const [titleSearch, setTitleSearch] = useState<string>("");
+  const [locationSearch, setLocationSearch] = useState<string>("");
 
-  const handleChange = (value:string) => {
-    setValueSearch(value);
+  const handleTitleChange = (value:string) => {
+    setTitleSearch(value);
+  }
+  const handleLocationChange = (value:string) => {
+    setLocationSearch(value);
   }
 
   // console.log(valueSearch)
@@ -40,7 +44,7 @@ const Filters = () => {
               placeholder="Filter By Title..."
               prefix={<BiSearch size={20} color="blue" />}
               allowClear
-              onChange={(e) => handleChange(e.target.value)}
+              onChange={(e) => handleTitleChange(e.target.value)}
             />
           </Form.Item>
 
@@ -50,6 +54,7 @@ const Filters = () => {
               placeholder="Filter By Location..."
               prefix={<FaLocationDot size={20} color="blue" />}
               allowClear
+              onChange={(e) => handleLocationChange(e.target.value)}
             />
           </Form.Item>
 
@@ -80,7 +85,7 @@ const Filters = () => {
       </div>
 
       <div>
-        <Jobs jobs={jobs} valueSearch={valueSearch} />
+        <Jobs jobs={jobs} titleSearch={titleSearch} locationSearch={locationSearch} />
       </div>
     </>
   );

@@ -11,21 +11,28 @@ export interface dataJobType {
   time_posted: string;
 }
 interface JobsProps {
-  valueSearch?: string
+  titleSearch?: string
+  locationSearch?: string
   jobs?: dataJobType[];
 }
 
 
-const Jobs:React.FC<JobsProps> = ({ jobs, valueSearch }) => {
+const Jobs:React.FC<JobsProps> = ({ jobs, titleSearch, locationSearch }) => {
 
   useMemo(() => {
-    if (valueSearch) {
+    if (titleSearch) {
       const filteredJobs = jobs?.filter((job) => {
-        return job.title.toLowerCase().includes(valueSearch.toLowerCase());
+        return job.title.toLowerCase().includes(titleSearch.toLowerCase());
       });
       jobs = filteredJobs;
     }
-  },[valueSearch])
+    if (locationSearch) {
+      const filteredJobs = jobs?.filter((job) => {
+        return job.location.toLowerCase().includes(locationSearch.toLowerCase());
+      });
+      jobs = filteredJobs;
+    }
+  },[titleSearch, locationSearch])
 
   return (
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 justify-center place-items-center translate-y-20">
