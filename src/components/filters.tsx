@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { FaLocationDot } from "react-icons/fa6";
 import Jobs, { dataJobType } from "./jobs";
+import { Route, Routes } from "react-router-dom";
 
 const Filters = () => {
   const [jobs, setJobs] = useState<dataJobType[]>([]);
@@ -10,16 +11,16 @@ const Filters = () => {
   const [locationSearch, setLocationSearch] = useState<string | undefined>("");
   const [workTypeSearch, setWorkTypeSearch] = useState<string | undefined>("");
 
-  const handleTitleChange = (value?:string) => {
+  const handleTitleChange = (value?: string) => {
     setTitleSearch(value);
-  }
-  const handleLocationChange = (value?:string) => {
+  };
+  const handleLocationChange = (value?: string) => {
     setLocationSearch(value);
-  }
-  const handleWorkTypeChange = (value?:string) => {
-    console.log(value)
+  };
+  const handleWorkTypeChange = (value?: string) => {
+    console.log(value);
     setWorkTypeSearch(value);
-  }
+  };
 
   // console.log(valueSearch)
   useEffect(() => {
@@ -33,7 +34,6 @@ const Filters = () => {
       .then((data) => setJobs(data))
       .catch((error) => console.log("Fetch error: ", error));
   }, []);
-
 
   return (
     <>
@@ -98,9 +98,19 @@ const Filters = () => {
         </Form>
       </div>
 
-      <div>
-        <Jobs jobs={jobs} titleSearch={titleSearch} locationSearch={locationSearch} workTypeSearch={workTypeSearch} />
-      </div>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Jobs
+              jobs={jobs}
+              titleSearch={titleSearch}
+              locationSearch={locationSearch}
+              workTypeSearch={workTypeSearch}
+            />
+          }
+        />
+      </Routes>
     </>
   );
 };
