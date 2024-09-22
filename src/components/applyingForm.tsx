@@ -1,10 +1,14 @@
 import { Button, Form, Input, Upload } from "antd";
 import { BiUpload } from "react-icons/bi";
+import NavBar from "./navBar";
 
 const ApplyingForm = () => {
   const { TextArea } = Input;
   return (
-    <div className=" bg-gray-50 z-10 w-[120%] h-screen p-8 rounded-md drop-shadow-lg space-y-8">
+    <>
+    <NavBar />
+    <div className="flex justify-center items-center -translate-y-4">
+    <div className=" bg-gray-50 z-10 w-[50%] h-screen p-8 rounded-md drop-shadow-lg space-y-8">
       <div className="flex flex-col justify-center items-center mb-8 space-y-2">
         <h1 className="text-3xl font-bold">Job Application Form</h1>
         <p>Please Fill Out the Form Below to Submit Your Job Application!</p>
@@ -93,6 +97,8 @@ const ApplyingForm = () => {
           </Form.Item>
       </Form>
     </div>
+    </div>
+    </>
   );
 };
 
