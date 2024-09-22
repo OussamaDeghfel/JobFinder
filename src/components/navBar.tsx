@@ -1,12 +1,16 @@
 import { Switch } from 'antd'
 import React from 'react'
 import { BiMoon, BiSun } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   return (
     <div className='flex flex-col h-28 w-full bg-blue-500 p-5 rounded-b-full'>
     <div className="flex w-[980px] h-12 justify-between items-center m-auto ">
-        <h1 className="text-2xl font-bold text-white">JobFinder</h1>
+        <h1 className="text-2xl font-bold text-white cursor-pointer">
+            <Link to="/">
+            JobFinder
+            </Link></h1>
         <div className="flex space-x-2">
           <span className="">
             {" "}
