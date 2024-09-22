@@ -3,6 +3,7 @@ import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 import relativeTime from "dayjs/plugin/relativeTime";
 import duration from "dayjs/plugin/duration";
+import { Link } from "react-router-dom";
 
 interface jobData {
   title: string;
@@ -65,8 +66,10 @@ const JobCard = ({
       <p className="text-gray-500">{description}</p>
       <div className="flex justify-between">
         <h1 className="text-blue-600 text-sm font-bold">{location}</h1>
+
         <Button type="primary" size="large">
-          Apply Now
+        
+          <Link to="/applyingForm">Apply Now</Link>
         </Button>
       </div>
     </div>
