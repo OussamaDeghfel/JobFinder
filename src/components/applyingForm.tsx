@@ -1,7 +1,7 @@
 import { Form, Input } from "antd";
-import React from "react";
 
 const ApplyingForm = () => {
+  const {TextArea} = Input
   return (
     <div className=" bg-gray-100 z-10 w-[120%] h-screen border-2 border-red-400 p-8 rounded-md drop-shadow-lg space-y-8">
       <div className="flex flex-col justify-center items-center mb-8 space-y-2">
@@ -13,7 +13,7 @@ const ApplyingForm = () => {
         <div className="flex justify-around">
           <Form.Item
             name="firstname"
-            label="FirstName"
+            label="First Name"
             rules={[
               {
                 required: true,
@@ -25,7 +25,7 @@ const ApplyingForm = () => {
           </Form.Item>
           <Form.Item
             name="lastname"
-            label="LastName"
+            label="Last Name"
             rules={[
               {
                 required: true,
@@ -46,20 +46,24 @@ const ApplyingForm = () => {
                 message: "Please input your Email Address!",
               },
             ]}
+            className="w-full px-10"
           >
             <Input />
           </Form.Item>
-          <Form.Item
-            name="phonenumber"
-            label="Phone Number"
+        </div>
+        <div className="flex">
+        <Form.Item
+            name="coverletter"
+            label="Cover Letter"
             rules={[
               {
                 required: true,
-                message: "Please input your Phone Number!",
+                message: "Please do not exceed 200 words.",
               },
             ]}
+            className="w-full px-10"
           >
-            <Input />
+            <TextArea size="large" />
           </Form.Item>
         </div>
       </Form>
