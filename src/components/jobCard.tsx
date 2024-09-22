@@ -56,7 +56,8 @@ const JobCard = ({
   }, [time_posted]);
 
   return (
-    <div className="border-2 border-blue-100 w-96 space-y-4 rounded-md p-4 m-4 shadow-md">
+    <div className="flex flex-col border-2 justify-between border-blue-100 w-96 h-72 rounded-md p-4 m-4 shadow-md">
+      <div className="flex flex-col space-y-4">
       <div className="flex items-center text-gray-500">
         <span>{dateAgo}</span>
         <span className="px-4 font-bold">.</span>
@@ -64,11 +65,11 @@ const JobCard = ({
       </div>
       <h1 className="text-3xl font-bold">{title}</h1>
       <p className="text-gray-500">{description}</p>
-      <div className="flex justify-between">
+      </div>
+      <div className="flex justify-between items-center">
         <h1 className="text-blue-600 text-sm font-bold">{location}</h1>
 
         <Button type="primary" size="large">
-        
           <Link to="/applyingForm">Apply Now</Link>
         </Button>
       </div>
