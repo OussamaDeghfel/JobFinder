@@ -1,10 +1,10 @@
-import { Form, Input, Upload } from "antd";
+import { Button, Form, Input, Upload } from "antd";
 import { BiUpload } from "react-icons/bi";
 
 const ApplyingForm = () => {
   const { TextArea } = Input;
   return (
-    <div className=" bg-gray-100 z-10 w-[120%] h-screen border-2 border-red-400 p-8 rounded-md drop-shadow-lg space-y-8">
+    <div className=" bg-gray-50 z-10 w-[120%] h-screen p-8 rounded-md drop-shadow-lg space-y-8">
       <div className="flex flex-col justify-center items-center mb-8 space-y-2">
         <h1 className="text-3xl font-bold">Job Application Form</h1>
         <p>Please Fill Out the Form Below to Submit Your Job Application!</p>
@@ -22,7 +22,7 @@ const ApplyingForm = () => {
               },
             ]}
           >
-            <Input />
+            <Input placeholder="First Name" />
           </Form.Item>
           <Form.Item
             name="lastname"
@@ -34,7 +34,7 @@ const ApplyingForm = () => {
               },
             ]}
           >
-            <Input />
+            <Input placeholder="Last Name" />
           </Form.Item>
         </div>
         <div className="flex justify-around">
@@ -49,7 +49,7 @@ const ApplyingForm = () => {
             ]}
             className="w-full px-10"
           >
-            <Input />
+            <Input placeholder="Enter your email" />
           </Form.Item>
         </div>
         <div className="flex">
@@ -62,9 +62,11 @@ const ApplyingForm = () => {
                 message: "Please do not exceed 200 words.",
               },
             ]}
-            className="w-full px-10"
+            className="w-full h-fit px-10"
           >
-            <TextArea size="large" />
+            <TextArea size="large" className="" placeholder="Write a brief description about yourself (e.g., your skills, experience, and goals)" />
+
+            
           </Form.Item>
         </div>
         <Form.Item label="Upload Resume" required className="w-full px-10">
@@ -84,6 +86,11 @@ const ApplyingForm = () => {
             </Upload.Dragger>
           </Form.Item>
         </Form.Item>
+        <Form.Item className="flex w-full px-10 justify-center items-center ">
+          <Button type="primary" htmlType="submit" size="large">
+            Apply
+          </Button>
+          </Form.Item>
       </Form>
     </div>
   );
