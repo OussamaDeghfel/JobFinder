@@ -75,18 +75,6 @@ const Jobs: React.FC<JobsProps> = ({
           ))}
         </div>
       )}
-
-      {/* {jobs?.map((job) => (
-        <div key={job.id}>
-          <JobCard
-            title={job.title}
-            location={job.location}
-            work_method={job.work_method}
-            description={job.description}
-            time_posted={job.time_posted}
-          />
-        </div>
-      ))} */}
     </div>
   );
 };
