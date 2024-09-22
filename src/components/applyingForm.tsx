@@ -1,7 +1,8 @@
-import { Form, Input } from "antd";
+import { Form, Input, Upload } from "antd";
+import { BiUpload } from "react-icons/bi";
 
 const ApplyingForm = () => {
-  const {TextArea} = Input
+  const { TextArea } = Input;
   return (
     <div className=" bg-gray-100 z-10 w-[120%] h-screen border-2 border-red-400 p-8 rounded-md drop-shadow-lg space-y-8">
       <div className="flex flex-col justify-center items-center mb-8 space-y-2">
@@ -52,7 +53,7 @@ const ApplyingForm = () => {
           </Form.Item>
         </div>
         <div className="flex">
-        <Form.Item
+          <Form.Item
             name="coverletter"
             label="Cover Letter"
             rules={[
@@ -66,6 +67,23 @@ const ApplyingForm = () => {
             <TextArea size="large" />
           </Form.Item>
         </div>
+        <Form.Item label="Upload Resume" required className="w-full px-10">
+          <Form.Item name="Upload Resume" className="bg-white rounded-md">
+            <Upload.Dragger name="Resume">
+              <div className="flex items-center justify-center">
+                <p>
+                  <BiUpload size={40}/>
+                </p>
+              </div>
+              <p className="text-xl">
+                Upload A File
+              </p>
+              <p className="text-sm font-thin">
+                Drag and drop a file in this area.
+              </p>
+            </Upload.Dragger>
+          </Form.Item>
+        </Form.Item>
       </Form>
     </div>
   );
