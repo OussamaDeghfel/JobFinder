@@ -1,9 +1,8 @@
 import { Switch } from 'antd'
 import { BiMoon, BiSun } from 'react-icons/bi'
 import Filters from './filters'
-import ApplyingForm from './applyingForm'
 
-const NavBar = () => {
+const JobFinderHome = () => {
   return (
     <div className='flex flex-col h-28 w-full bg-blue-500 p-5 rounded-b-full'>
         <div className='flex w-[980px] h-12 justify-between items-center m-auto '>
@@ -15,11 +14,10 @@ const NavBar = () => {
         </div>
         </div>
         <div className='flex flex-col items-center m-auto'>
-            {/* <Filters /> */}
-            <ApplyingForm />
+            <Filters />
         </div>
     </div>
   )
 }
 
-export default NavBar
+export default JobFinderHome
