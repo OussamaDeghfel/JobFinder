@@ -7,7 +7,18 @@ const ApplyingForm = () => {
   return (
     <>
       <NavBar />
-      <div className="flex justify-center items-center -translate-y-4 ">
+      <div className="flex justify-evenly items-center -translate-y-4 ">
+        <div className="bg-gray-50 z-10 w-[50vh] h-[50%] p-8 rounded-md shadow-lg dark:bg-slate-500 border-2 border-red-700">
+          <h1 className="font-bold text-2xl">You Are Applying for this Role : </h1>   
+            <div className="flex flex-col items-start text-gray-500">
+              <h1 className="text-3xl font-bold">title</h1>
+              <p className="text-gray-500">Description</p>
+              <span>Work method</span>
+              <h1 className="text-blue-600 text-sm font-bold dark:text-blue-300">
+                location
+              </h1>
+            </div>
+        </div>
         <div className=" bg-gray-50 z-10 w-[50%] h-screen p-8 rounded-md drop-shadow-lg space-y-8 dark:bg-slate-500">
           <div className="flex flex-col justify-center items-center mb-8 space-y-2 dark:text-white">
             <h1 className="text-3xl font-bold ">Job Application Form</h1>
