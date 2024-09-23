@@ -7,15 +7,15 @@ const ApplyingForm = () => {
   return (
     <>
       <NavBar />
-      <div className="flex justify-center items-center -translate-y-4">
-        <div className=" bg-gray-50 z-10 w-[50%] h-screen p-8 rounded-md drop-shadow-lg space-y-8">
+      <div className="flex justify-center items-center -translate-y-4 ">
+        <div className=" bg-gray-50 z-10 w-[50%] h-screen p-8 rounded-md drop-shadow-lg space-y-8 dark:bg-slate-400">
           <div className="flex flex-col justify-center items-center mb-8 space-y-2">
             <h1 className="text-3xl font-bold">Job Application Form</h1>
             <p>
               Please Fill Out the Form Below to Submit Your Job Application!
             </p>
           </div>
-          <div className="w-full h-0.5 bg-gray-300"></div>
+          <div className="w-full h-0.5 bg-gray-300 dark:bg-slate-700"></div>
           <Form layout="vertical">
             <div className="flex justify-around">
               <Form.Item
@@ -28,7 +28,7 @@ const ApplyingForm = () => {
                   },
                 ]}
               >
-                <Input placeholder="First Name" />
+                <Input placeholder="First Name" className=" dark:bg-slate-300 dark:text-black" />
               </Form.Item>
               <Form.Item
                 name="lastname"
@@ -43,7 +43,7 @@ const ApplyingForm = () => {
                 <Input placeholder="Last Name" />
               </Form.Item>
             </div>
-            <div className="flex justify-around">
+            <div className="flex px-12">
               <Form.Item
                 name="email"
                 label="Email"
@@ -58,7 +58,7 @@ const ApplyingForm = () => {
                 <Input placeholder="Enter your email" />
               </Form.Item>
             </div>
-            <div className="flex">
+            <div className="flex px-12">
               <Form.Item
                 name="coverletter"
                 label="Cover Letter"
@@ -77,6 +77,7 @@ const ApplyingForm = () => {
                 />
               </Form.Item>
             </div>
+            <div className="flex px-12">
             <Form.Item label="Upload Resume" className="w-full px-10">
               <Form.Item
                 name="Upload Resume"
@@ -101,6 +102,7 @@ const ApplyingForm = () => {
                 </Upload.Dragger>
               </Form.Item>
             </Form.Item>
+            </div>
             <Form.Item className="flex w-full px-10 justify-center items-center ">
               <Button type="primary" htmlType="submit" size="large">
                 Apply

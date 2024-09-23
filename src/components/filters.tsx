@@ -39,26 +39,28 @@ const Filters = () => {
     <>
       <div>
         <Form
-          className="flex translate-y-3 px-5 bg-white h-20 pt-4 rounded-md justify-rounded items-center w-full shadow-lg"
+          className="flex translate-y-3 px-5 dark:bg-slate-500 bg-white h-20 pt-4 rounded-md justify-rounded items-center w-full shadow-lg"
           // onFinish={searchByFilter}
         >
-          <Form.Item className="p-2 border-r-2">
+          <Form.Item className="p-2 border-r-2 dark:border-slate-700">
             <Input
               type="text"
               placeholder="Filter By Title..."
               prefix={<BiSearch size={20} color="blue" />}
               allowClear
               onChange={(e) => handleTitleChange(e.target.value)}
+              className=" dark:bg-slate-300 dark:text-black"
             />
           </Form.Item>
 
-          <Form.Item className="p-2 border-r-2">
+          <Form.Item className="p-2 border-r-2 dark:border-slate-700">
             <Input
               type="text"
               placeholder="Filter By Location..."
               prefix={<FaLocationDot size={20} color="blue" />}
               allowClear
               onChange={(e) => handleLocationChange(e.target.value)}
+              className=" dark:bg-slate-300 dark:text-black"
             />
           </Form.Item>
 
@@ -86,15 +88,10 @@ const Filters = () => {
                 ]}
                 onChange={handleWorkTypeChange}
                 allowClear
+                
               />
             </div>
           </Form.Item>
-
-          {/* <Form.Item className="p-2">
-            <Button type="primary" htmlType="submit">
-              Search
-            </Button>
-          </Form.Item> */}
         </Form>
       </div>
 

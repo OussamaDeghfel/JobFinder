@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       {/* <NavBar /> */}
-      {/* <Jobs /> */}
+      {/* <Jobs /> */} 
       <Router>
         <Routes>
           <Route path="/" element={<JobFinderHome />} />
