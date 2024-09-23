@@ -5,7 +5,7 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import duration from "dayjs/plugin/duration";
 import { Link } from "react-router-dom";
 
-interface jobData {
+export interface jobData {
   title: string;
   location: string;
   work_method: string;
@@ -14,6 +14,7 @@ interface jobData {
 }
 
 const JobCard = ({
+ 
   title,
   location,
   work_method,
@@ -55,6 +56,13 @@ const JobCard = ({
     ChangeDateFormat(time_posted);
   }, [time_posted]);
 
+  const saveJobData = () => {
+      localStorage.setItem("title", title);
+      localStorage.setItem("descrption", description)
+      localStorage.setItem("work_method", work_method)
+      localStorage.setItem("location", location)
+  }
+
   return (
     <div className="flex flex-col border-2 dark:bg-slate-800 dark:text-gray-200 dark:border-slate-600 justify-between border-blue-100 w-96 h-72 rounded-md p-4 m-4 shadow-md">
       <div className="flex flex-col space-y-4">
@@ -69,7 +77,7 @@ const JobCard = ({
       <div className="flex justify-between items-center">
         <h1 className="text-blue-600 text-sm font-bold dark:text-blue-300">{location}</h1>
 
-        <Button type="primary" size="large" className="dark:bg-blue-500">
+        <Button type="primary" size="large" className="dark:bg-blue-500" onClick={saveJobData}>
           <Link to="/applyingForm">Apply Now</Link>
         </Button>
       </div>
