@@ -1,21 +1,37 @@
 import { Button, Form, Input, Upload } from "antd";
 import { BiUpload } from "react-icons/bi";
 import NavBar from "./navBar";
+import { useEffect, useState } from "react";
 
 const ApplyingForm = () => {
   const { TextArea } = Input;
+  const [roleData, setRoleData] = useState({
+    title: '',
+    description: '',
+    work_method: '',
+    location: '',
+  });
+
+  useEffect(() => {
+    setRoleData({
+      title: localStorage.getItem('title') || '',
+      description: localStorage.getItem('descrption') || '',
+      work_method: localStorage.getItem('work_method') || '',
+      location: localStorage.getItem('location') || '',
+    });
+  }, []);
   return (
     <>
       <NavBar />
       <div className="flex justify-evenly items-center -translate-y-4 ">
-        <div className="bg-gray-50 z-10 w-[50vh] h-[50%] p-8 rounded-md shadow-lg dark:bg-slate-500 border-2 border-red-700">
-          <h1 className="font-bold text-2xl">You Are Applying for this Role : </h1>   
-            <div className="flex flex-col items-start text-gray-500">
-              <h1 className="text-3xl font-bold">title</h1>
-              <p className="text-gray-500">Description</p>
-              <span>Work method</span>
-              <h1 className="text-blue-600 text-sm font-bold dark:text-blue-300">
-                location
+        <div className="bg-gray-50 z-10 w-[50vh] h-[50%] p-8 rounded-md shadow-lg dark:bg-slate-500 border-2 border-gray-200 space-y-8">
+          <h1 className="font-bold text-xl">You Are Applying for this Role : </h1>   
+            <div className="flex flex-col items-start text-gray-500 space-y-5">
+              <h1 className="text-3xl font-bold dark:text-white">{roleData.title}</h1>
+              <p className="text-gray-500 dark:text-gray-300">{roleData.description}</p>
+              <span className="dark:text-gray-300">{roleData.work_method}</span>
+              <h1 className="text-blue-600 text-sm font-bold dark:text-blue-800">
+              {roleData.location}
               </h1>
             </div>
         </div>
