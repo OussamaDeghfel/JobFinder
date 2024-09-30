@@ -1,7 +1,8 @@
 import { Button, Form, Input, Upload } from "antd";
 import { BiUpload } from "react-icons/bi";
-import NavBar from "./navBar";
+// import NavBar from "./navBar";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const ApplyingForm = () => {
   const { TextArea } = Input;
@@ -22,7 +23,15 @@ const ApplyingForm = () => {
   }, []);
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
+      <div className='flex flex-col h-28 w-full dark:bg-slate-800 bg-blue-500 p-5 rounded-b-full'>
+    <div className="flex w-[980px] h-12 justify-start items-center m-auto ">
+        <h1 className="text-2xl font-bold text-white cursor-pointer">
+            <Link to="/">
+            JobFinder
+            </Link></h1>
+      </div>
+      </div>
       <div className="flex justify-evenly items-center -translate-y-4 ">
         <div className="bg-gray-50 z-10 w-[50vh] h-[50%] p-8 rounded-md shadow-lg dark:bg-slate-500 border-2 border-gray-200 space-y-8">
           <h1 className="font-bold text-xl">You Are Applying for this Role : </h1>   
