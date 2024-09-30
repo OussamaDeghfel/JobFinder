@@ -35,7 +35,7 @@ const ApplyingForm = () => {
               </h1>
             </div>
         </div>
-        <div className=" bg-gray-50 z-10 w-[50%] h-screen p-8 rounded-md drop-shadow-lg space-y-8 dark:bg-slate-500">
+        <div className=" bg-gray-50 z-10 w-[50%] h-fit p-8 rounded-md drop-shadow-lg space-y-8 dark:bg-slate-500">
           <div className="flex flex-col justify-center items-center mb-8 space-y-2 dark:text-white">
             <h1 className="text-3xl font-bold ">Job Application Form</h1>
             <p>
