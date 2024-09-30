@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react'
 import { BiMoon, BiSun } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
 
-const NavBar = () => {
-const [darkMode, setDarkMode] = useState(false)
+const NavBar = ( ) => {
+const [darkMode, setDarkMode] = useState<boolean>(false)
 
   useEffect(() => {
     if (darkMode) {
