@@ -4,10 +4,7 @@ import { BiMoon, BiSun } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
 
 const NavBar = () => {
-const [darkMode, setDarkMode] = useState(() => {
-  return localStorage.getItem('theme') === 'light'
-})
-
+const [darkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
     if (darkMode) {
