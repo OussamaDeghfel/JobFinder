@@ -23,17 +23,29 @@ const Filters = () => {
   };
 
   // console.log(valueSearch)
+  // fetch job list localy from jsondata 
+  // useEffect(() => {
+  //   fetch("././jobData.json")
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
+  //       return response.json();
+  //     })
+  //     .then((data) => setJobs(data))
+  //     .catch((error) => console.log("Fetch error: ", error));
+  // }, []);
+
+  // fetch jobs from backend endpoint
+
   useEffect(() => {
-    fetch("././jobData.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
+    fetch('http://localhost:5000/api/jobs')  // URL of the backend API
+      .then((response) => response.json())
       .then((data) => setJobs(data))
-      .catch((error) => console.log("Fetch error: ", error));
-  }, []);
+      .catch((error) => console.error('Error fetching jobs:', error));
+  },[])
+
+  console.log("job list :", jobs)
 
   return (
     <>
