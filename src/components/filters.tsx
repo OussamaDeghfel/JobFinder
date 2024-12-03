@@ -1,14 +1,14 @@
-import { Form, Input, Select } from "antd";
+import { Form, Input, message, Select } from "antd";
 import { useEffect, useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { FaLocationDot } from "react-icons/fa6";
-import Jobs from "./jobs";
+import Jobs, { dataJobType } from "./jobs";
 import { Route, Routes } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 
 const Filters = () => {
-  // const [jobs, setJobs] = useState<dataJobType[]>([]);
+  const [jobs, setJobs] = useState<dataJobType[]>([]);
   const [titleSearch, setTitleSearch] = useState<string | undefined>("");
   const [locationSearch, setLocationSearch] = useState<string | undefined>("");
   const [workTypeSearch, setWorkTypeSearch] = useState<string | undefined>("");
@@ -52,10 +52,19 @@ const Filters = () => {
       try {
         const jobsCollection = collection(db, "jobs");
         const snapshot = await getDocs(jobsCollection);
-        const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-        console.log("Firestore Data:", data);
-      } catch (error) {
-        console.error("Error accessing Firestore:", error);
+        const data = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+          title: doc.data().title || '',
+          location: doc.data().location || '',
+          work_method: doc.data().work_method || '',
+          description: doc.data().description || '',
+          time_posted: doc.data().time_posted || '',
+        }));
+        setJobs(data);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      } catch (error:any) {
+        message.error("Error fetching jobs:", error);
       }
     }
 
@@ -128,7 +137,7 @@ const Filters = () => {
           path="/"
           element={
             <Jobs
-              // jobs={jobs}
+              jobs={jobs}
               titleSearch={titleSearch}
               locationSearch={locationSearch}
               workTypeSearch={workTypeSearch}
