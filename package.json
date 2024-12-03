@@ -1,17 +1,40 @@
 {
-  "name": "itjobs",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/OussamaDeghfel/JobFinder.git",
-  "author": "OussamaDeghfel <oussama.deghfel@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "concurrently": "^9.1.0"
-  },
+  "name": "itjobs-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "concurrently \"yarn server\" \"yarn client\"",
-    "server": "cd backend && npm start",
-    "client": "cd frontend && yarn dev",
-    "build": "cd frontend && yarn build && cd ../backend && npm run build"
-  }
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "upload-jobs": "node uploadJobs.js"
+  },
+  "dependencies": {
+    "@types/react-router-dom": "^5.3.3",
+    "antd": "^5.20.6",
+    "dayjs": "^1.11.13",
+    "firebase": "^11.0.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.9.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "globals": "^15.9.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.12",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.0.1",
+    "vite": "^5.4.1"
+  },
+  "proxy": "http://localhost:5000"
 }

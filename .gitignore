@@ -1,37 +1,27 @@
-# Node modules
-/node_modules/
-
-# Build output
-/dist/
-build/
-
-# Environment files
-.env
-.env.*.local
-
 # Logs
-logs/
+logs
 *.log
-*.log.*
-
-# Dependency directories
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Operating system files
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# IDE configuration files
-.vscode/
-.idea/
-
-# Optional: If you're using the package-lock file with npm (for consistency)
-package-lock.json
-
-# Optional: If you're using the yarn.lock file (for consistency)
-yarn.lock
-
-# Optional: If you're using TypeScript and want to ignore the compiled output
-*.tsbuildinfo
+# Ignore environment files
+.env
