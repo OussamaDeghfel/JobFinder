@@ -8,12 +8,13 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "upload-jobs": "node uploadJobs.js"
+    "upload-jobs": "node src/uploadJobs.js"
   },
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
     "antd": "^5.20.6",
     "dayjs": "^1.11.13",
+    "dotenv": "^16.4.6",
     "firebase": "^11.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

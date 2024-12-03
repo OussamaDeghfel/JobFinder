@@ -1,9 +1,11 @@
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "./firebase.js"
 
-// import jobData from "./jobsData.json"
+import jobData from "./jobsData.json"
 
-const jobData = require("./jobs.json");
+// const jobData = require("./jobs.json");
+
+console.log("job data json file",jobData)
 
 const UploadJobs = async() => {
     const jobsRef = collection(db, "jobs");

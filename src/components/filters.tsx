@@ -2,11 +2,13 @@ import { Form, Input, Select } from "antd";
 import { useEffect, useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { FaLocationDot } from "react-icons/fa6";
-import Jobs, { dataJobType } from "./jobs";
+import Jobs from "./jobs";
 import { Route, Routes } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
 
 const Filters = () => {
-  const [jobs, setJobs] = useState<dataJobType[]>([]);
+  // const [jobs, setJobs] = useState<dataJobType[]>([]);
   const [titleSearch, setTitleSearch] = useState<string | undefined>("");
   const [locationSearch, setLocationSearch] = useState<string | undefined>("");
   const [workTypeSearch, setWorkTypeSearch] = useState<string | undefined>("");
@@ -38,14 +40,28 @@ const Filters = () => {
 
   // fetch jobs from backend endpoint
 
-  useEffect(() => {
-    fetch('http://localhost:5000/api/jobs')  // URL of the backend API
-      .then((response) => response.json())
-      .then((data) => setJobs(data))
-      .catch((error) => console.error('Error fetching jobs:', error));
-  },[])
+  // useEffect(() => {
+  //   fetch('http://localhost:5000/api/jobs')  // URL of the backend API
+  //     .then((response) => response.json())
+  //     .then((data) => setJobs(data))
+  //     .catch((error) => console.error('Error fetching jobs:', error));
+  // },[])
 
-  console.log("job list :", jobs)
+  useEffect(() => {
+    const fetchJobs = async () => {
+      try {
+        const jobsCollection = collection(db, "jobs");
+        const snapshot = await getDocs(jobsCollection);
+        const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        console.log("Firestore Data:", data);
+      } catch (error) {
+        console.error("Error accessing Firestore:", error);
+      }
+    }
+
+    fetchJobs()
+    
+  },[])
 
   return (
     <>
@@ -112,7 +128,7 @@ const Filters = () => {
           path="/"
           element={
             <Jobs
-              jobs={jobs}
+              // jobs={jobs}
               titleSearch={titleSearch}
               locationSearch={locationSearch}
               workTypeSearch={workTypeSearch}
