@@ -8,7 +8,10 @@ export interface dataJobType {
   location: string;
   work_method: string;
   description: string;
-  time_posted: string;
+  time_posted: {
+    seconds: number;
+    nanoseconds: number;
+  };
 }
 interface JobsProps {
   titleSearch?: string;
@@ -48,6 +51,11 @@ const Jobs: React.FC<JobsProps> = ({
       jobs = filteredJobs;
     }
   }, [titleSearch, locationSearch, workTypeSearch]);
+
+  
+  // jobs?.map((job) => {
+  //   calculateTime(job.time_posted.nanoseconds, job.time_posted.seconds)
+  // })
 
   return (
     <div className="flex flex-col translate-y-20">
