@@ -37,7 +37,7 @@ const NavBar = () => {
   }, [])
   return (
     <div className="flex flex-col h-28 w-full dark:bg-slate-800 bg-blue-500 p-5 rounded-b-full">
-      <div className="flex w-[980px] h-12 justify-between items-center m-auto ">
+      <div className="flex w-full h-12 justify-between items-center m-auto">
         <h1 className="text-2xl font-bold text-white cursor-pointer">
           <Link to="/">JobFinder</Link>
         </h1>
