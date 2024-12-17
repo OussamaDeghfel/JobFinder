@@ -21,7 +21,7 @@ const ApplyingForm = () => {
   }, []);
   return (
     <>
-      <div className="flex justify-evenly items-center -translate-y-4 border-2 border-red-500">
+      <div className="flex justify-evenly items-center -translate-y-4 ">
         <div className="bg-gray-50 z-10 w-[50vh] h-[50%] p-8 rounded-md shadow-lg dark:bg-slate-500 border-2 border-gray-200 space-y-8">
           <h1 className="font-bold text-xl">
             You Are Applying for this Role :{" "}
