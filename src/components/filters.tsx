@@ -74,9 +74,9 @@ const Filters = () => {
 
   return (
     <>
-      <div>
+      <div className="flex -translate-y-5 w-fit h-fit mx-auto justify-center items-center ">
         <Form
-          className="flex translate-y-3 px-5 dark:bg-slate-500 bg-white h-20 pt-4 rounded-md justify-rounded items-center w-full shadow-lg"
+          className="flex px-5 border-2 border-gray-100 dark:bg-slate-500 bg-white h-20 pt-4 rounded-md justify-rounded items-center w-full shadow-lg"
           // onFinish={searchByFilter}
         >
           <Form.Item className="p-2 border-r-2 dark:border-slate-700">

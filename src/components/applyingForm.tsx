@@ -1,48 +1,43 @@
 import { Button, Form, Input, Upload } from "antd";
 import { BiUpload } from "react-icons/bi";
-// import NavBar from "./navBar";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 const ApplyingForm = () => {
   const { TextArea } = Input;
   const [roleData, setRoleData] = useState({
-    title: '',
-    description: '',
-    work_method: '',
-    location: '',
+    title: "",
+    description: "",
+    work_method: "",
+    location: "",
   });
 
   useEffect(() => {
     setRoleData({
-      title: localStorage.getItem('title') || '',
-      description: localStorage.getItem('descrption') || '',
-      work_method: localStorage.getItem('work_method') || '',
-      location: localStorage.getItem('location') || '',
+      title: localStorage.getItem("title") || "",
+      description: localStorage.getItem("descrption") || "",
+      work_method: localStorage.getItem("work_method") || "",
+      location: localStorage.getItem("location") || "",
     });
   }, []);
   return (
     <>
-      {/* <NavBar /> */}
-      <div className='flex flex-col h-28 w-full dark:bg-slate-800 bg-blue-500 p-5 rounded-b-full'>
-    <div className="flex w-[980px] h-12 justify-start items-center m-auto ">
-        <h1 className="text-2xl font-bold text-white cursor-pointer">
-            <Link to="/">
-            JobFinder
-            </Link></h1>
-      </div>
-      </div>
       <div className="flex justify-evenly items-center -translate-y-4 ">
         <div className="bg-gray-50 z-10 w-[50vh] h-[50%] p-8 rounded-md shadow-lg dark:bg-slate-500 border-2 border-gray-200 space-y-8">
-          <h1 className="font-bold text-xl">You Are Applying for this Role : </h1>   
-            <div className="flex flex-col items-start text-gray-500 space-y-5">
-              <h1 className="text-3xl font-bold dark:text-white">{roleData.title}</h1>
-              <p className="text-gray-500 dark:text-gray-300">{roleData.description}</p>
-              <span className="dark:text-gray-300">{roleData.work_method}</span>
-              <h1 className="text-blue-600 text-sm font-bold dark:text-blue-800">
+          <h1 className="font-bold text-xl">
+            You Are Applying for this Role :{" "}
+          </h1>
+          <div className="flex flex-col items-start text-gray-500 space-y-5">
+            <h1 className="text-3xl font-bold dark:text-white">
+              {roleData.title}
+            </h1>
+            <p className="text-gray-500 dark:text-gray-300">
+              {roleData.description}
+            </p>
+            <span className="dark:text-gray-300">{roleData.work_method}</span>
+            <h1 className="text-blue-600 text-sm font-bold dark:text-blue-800">
               {roleData.location}
-              </h1>
-            </div>
+            </h1>
+          </div>
         </div>
         <div className=" bg-gray-50 z-10 w-[50%] h-fit p-8 rounded-md drop-shadow-lg space-y-8 dark:bg-slate-500">
           <div className="flex flex-col justify-center items-center mb-8 space-y-2 dark:text-white">
