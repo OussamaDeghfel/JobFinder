@@ -1,7 +1,7 @@
 // import { Switch } from "antd";
 import { useEffect, useState } from 'react'
 import { BiMoon, BiSun } from "react-icons/bi";
-import { Link } from "react-router-dom";
+// import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 
@@ -35,11 +35,13 @@ const NavBar = () => {
     }
 
   }, [])
+
   return (
     <div className="flex flex-col h-28 w-full dark:bg-slate-800 bg-blue-500 p-5 rounded-b-full">
       <div className="flex w-full h-12 justify-between items-center m-auto">
         <h1 className="text-2xl font-bold text-white cursor-pointer">
-          <Link to="/">JobFinder</Link>
+          {/* <Link to="/">JobFinder</Link> */}
+          JobFinder
         </h1>
         <div className="flex space-x-2">
           {sun && (<span className="cursor-pointer" onClick={() => changeTheme()}>
@@ -53,8 +55,7 @@ const NavBar = () => {
             {" "}
             <BiMoon size={20} color="white" />{" "}
           </span>
-          )}
-          
+          )} 
         </div>
       </div>
     </div>
