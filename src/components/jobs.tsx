@@ -58,7 +58,7 @@ const Jobs: React.FC<JobsProps> = ({
   // })
 
   return (
-    <div className="flex flex-col translate-y-20">
+    <div className="flex flex-col justify-center items-center mx-auto translate-y-2 w-[90%]">
       {jobs?.length == 0 ? (
         <div className="flex flex-col justify-center items-center w-full h-full space-y-5">
           <h1 className="text-3xl font-bold dark:text-white">"No Jobs Match Your Search."</h1>
