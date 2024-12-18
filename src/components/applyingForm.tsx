@@ -24,20 +24,25 @@ const ApplyingForm = () => {
     });
   }, []);
 
-  const handleValueChanges = () => {
+  // const handleValueChanges = () => {
+  //   const firstname = form.getFieldValue("firstname");
+  //   const lastname = form.getFieldValue("lastname");
+  //   const email = form.getFieldValue("email");
+  //   const coverletter = form.getFieldValue("coverletter");
+  //   const salaryrange = form.getFieldValue("salaryrange");
+
+    
+  // };
+
+  const handleSubmit = () => {
     const firstname = form.getFieldValue("firstname");
     const lastname = form.getFieldValue("lastname");
     const email = form.getFieldValue("email");
     const coverletter = form.getFieldValue("coverletter");
     const salaryrange = form.getFieldValue("salaryrange");
-
     if (firstname && lastname && email && coverletter && salaryrange) {
       setIsFormValid(true);
     }
-  };
-
-  const handleSubmit = () => {
-    console.log(isFormValid);
   };
 
   return (
@@ -73,7 +78,7 @@ const ApplyingForm = () => {
               form={form}
               layout="vertical"
               style={{ height: "100%" }}
-              onValuesChange={handleValueChanges}
+              // onValuesChange={handleValueChanges}
               onFinish={handleSubmit}
             >
               <div className="flex flex-col justify-between h-full overflow-hidden">
