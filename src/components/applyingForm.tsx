@@ -24,25 +24,13 @@ const ApplyingForm = () => {
     });
   }, []);
 
-  // const handleValueChanges = () => {
-  //   const firstname = form.getFieldValue("firstname");
-  //   const lastname = form.getFieldValue("lastname");
-  //   const email = form.getFieldValue("email");
-  //   const coverletter = form.getFieldValue("coverletter");
-  //   const salaryrange = form.getFieldValue("salaryrange");
-
-    
-  // };
 
   const handleSubmit = () => {
-    const firstname = form.getFieldValue("firstname");
-    const lastname = form.getFieldValue("lastname");
-    const email = form.getFieldValue("email");
-    const coverletter = form.getFieldValue("coverletter");
-    const salaryrange = form.getFieldValue("salaryrange");
-    if (firstname && lastname && email && coverletter && salaryrange) {
-      setIsFormValid(true);
-    }
+    const values = form.getFieldsValue()
+
+    const allFieldsValid = Object.values(values).every((value) => value !== '');
+    
+    setIsFormValid(allFieldsValid);
   };
 
   return (
@@ -235,7 +223,7 @@ const ApplyingForm = () => {
 
       {isFormValid && (
         <div className="w-full h-screen flex flex-col justify-center items-center">
-        <SuccessApply />
+        <SuccessApply role={roleData.title} />
         </div>
       )}
     </>
