@@ -1,15 +1,23 @@
-import { BiCheckDouble } from 'react-icons/bi'
+import { BiArrowToLeft, BiCheckDouble } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const SuccessApply = () => {
   return (
-    <div className='flex flex-col w-fit h-fit justify-center items-center mx-auto'>
-        <BiCheckDouble size={35} color='blue' />
-        <h1>Success Apply</h1>
-        <p>
-            You have successfully applied for this role
-        </p>
-    </div>
-  )
-}
+    <div className="flex space-y-5 flex-col w-fit h-fit justify-center items-center mx-auto dark:text-white">
+      <BiCheckDouble
+        size={65}
+        color="blue"
+        className="bg-blue-200 p-2 rounded-full shadow-md shadow-gray-200"
+      />
 
-export default SuccessApply
+      <p className="text-2xl">You have successfully applied for this role</p>
+
+      <Link to="/" className="text-gray-500 flex space-x-2 justify-center items-center hover:text-blue-500">
+        <BiArrowToLeft size={20} />
+        <span>Go back to job finder</span>
+      </Link>
+    </div>
+  );
+};
+
+export default SuccessApply;
