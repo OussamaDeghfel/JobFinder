@@ -1,4 +1,4 @@
-import { Button, Form, Input, Upload } from "antd";
+import { Button, Form, Input, Select, Upload } from "antd";
 import { BiUpload } from "react-icons/bi";
 import { useEffect, useState } from "react";
 
@@ -10,6 +10,9 @@ const ApplyingForm = () => {
     work_method: "",
     location: "",
   });
+  const [isFormValid, setIsFormValid] = useState([]);
+
+  const [form] = Form.useForm();
 
   useEffect(() => {
     setRoleData({
@@ -19,6 +22,16 @@ const ApplyingForm = () => {
       location: localStorage.getItem("location") || "",
     });
   }, []);
+
+  const handleValueChanges = () => {
+    const firstname = form.getFieldValue("firstname");
+    setIsFormValid(firstname);
+  };
+
+  const handleSubmit = () => {
+    console.log(isFormValid)
+  }
+
   return (
     <>
       <div className="flex justify-evenly items-center -translate-y-4 ">
@@ -47,7 +60,13 @@ const ApplyingForm = () => {
             </p>
           </div>
           <div className="w-full h-0.5 bg-gray-300 dark:bg-slate-700"></div>
-          <Form layout="vertical" style={{ height: "100%" }}>
+          <Form
+            form={form}
+            layout="vertical"
+            style={{ height: "100%" }}
+            onValuesChange={handleValueChanges}
+            onFinish={handleSubmit}
+          >
             <div className="flex flex-col justify-between h-full overflow-hidden">
               <div className="flex justify-between px-20">
                 <Form.Item
@@ -121,6 +140,36 @@ const ApplyingForm = () => {
               </div>
               <div className="flex px-10">
                 <Form.Item
+                  name="salaryrange"
+                  label={<span className="dark:text-white">Salary Range</span>}
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please select your salary range.",
+                    },
+                  ]}
+                  className="w-full px-10"
+                >
+                  <Select placeholder="Select your salary range" options={
+                    [
+                      {
+                        value: "1",
+                        label: "200$ - 500$"
+                      },
+                      {
+                        value: "2",
+                        label: "500$ - 1000$"
+                      },
+                      {
+                        value: "3",
+                        label: "1000$ - 2000$"
+                      },
+                    ]
+                  } /> 
+                </Form.Item>
+              </div>
+              {/* <div className="flex px-10">
+                <Form.Item
                   label={<span className="dark:text-white">Upload Resume</span>}
                   className="w-full px-10"
                 >
@@ -147,7 +196,7 @@ const ApplyingForm = () => {
                     </Upload.Dragger>
                   </Form.Item>
                 </Form.Item>
-              </div>
+              </div> */}
               <Form.Item className="flex w-full px-10 justify-center items-center ">
                 <Button
                   type="primary"
