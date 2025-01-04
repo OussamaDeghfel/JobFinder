@@ -70,7 +70,7 @@ const ApplyingForm = () => {
               onFinish={handleSubmit}
             >
               <div className="flex flex-col justify-between h-full overflow-hidden">
-                <div className="flex justify-between px-20">
+                <div className="flex flex-col justify-between px-20">
                   <Form.Item
                     label={<span className="dark:text-white">First Name</span>}
                     name="firstname"
@@ -154,7 +154,7 @@ const ApplyingForm = () => {
                         message: "Please select your salary range.",
                       },
                     ]}
-                    className="w-full px-10"
+                    className="w-full px-10 "
                   >
                     <Select
                       placeholder="Select your salary range"
@@ -210,7 +210,7 @@ const ApplyingForm = () => {
                     type="primary"
                     htmlType="submit"
                     size="large"
-                    className="dark:bg-blue-500"
+                    className="dark:bg-blue-500 w-[20vh] border-2 border-blue-300 font-bold text-lg"
                   >
                     Apply
                   </Button>
