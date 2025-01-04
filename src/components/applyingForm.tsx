@@ -36,10 +36,10 @@ const ApplyingForm = () => {
   return (
     <>
       {!isFormValid && (
-        <div className="flex justify-evenly items-center -translate-y-4 ">
-          <div className="bg-gray-50 z-10 w-[50vh] h-[50%] p-8 rounded-md shadow-lg dark:bg-slate-500 border-2 border-gray-200 space-y-8">
+        <div className="flex flex-col md:flex-row justify-evenly items-center -translate-y-4 space-y-2">
+          <div className="bg-gray-50 z-10 w-[40vh] md:w-[50vh] h-[50%] p-8 rounded-md shadow-lg dark:bg-slate-500 border-2 border-gray-200 space-y-8 justify-center items-center">
             <h1 className="font-bold text-xl">
-              You Are Applying for this Role :{" "}
+              You Are Applying for this Role {" "}
             </h1>
             <div className="flex flex-col items-start text-gray-500 space-y-5">
               <h1 className="text-3xl font-bold dark:text-white">
@@ -54,7 +54,7 @@ const ApplyingForm = () => {
               </h1>
             </div>
           </div>
-          <div className=" bg-gray-50 z-10 w-[50%] h-fit p-8 rounded-md drop-shadow-lg space-y-8 dark:bg-slate-500">
+          <div className=" bg-gray-50 border-2 border-gray-300 z-10 w-[90%] md:w-[50%] h-fit p-8 rounded-md drop-shadow-lg space-y-8 dark:bg-slate-500">
             <div className="flex flex-col justify-center items-center mb-8 space-y-2 dark:text-white">
               <h1 className="text-3xl font-bold ">Job Application Form</h1>
               <p>

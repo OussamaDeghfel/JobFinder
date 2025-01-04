@@ -76,10 +76,10 @@ const Filters = () => {
     <>
       <div className="flex -translate-y-5 w-fit h-fit mx-auto justify-center items-center ">
         <Form
-          className="flex px-5 border-2 border-gray-100 dark:bg-slate-500 bg-white h-20 pt-4 rounded-md justify-rounded items-center w-full shadow-lg"
+          className="flex flex-col md:flex-row h-fit px-5 border-2 border-gray-100 dark:bg-slate-500 bg-white pt-4 rounded-md justify-rounded items-center w-full shadow-lg"
           // onFinish={searchByFilter}
         >
-          <Form.Item className="p-2 border-r-2 dark:border-slate-700">
+          <Form.Item className="p-2 md:border-r-2 dark:border-slate-700">
             <Input
               type="text"
               placeholder="Filter By Title..."
@@ -90,7 +90,7 @@ const Filters = () => {
             />
           </Form.Item>
 
-          <Form.Item className="p-2 border-r-2 dark:border-slate-700">
+          <Form.Item className="p-2 md:border-r-2 dark:border-slate-700">
             <Input
               type="text"
               placeholder="Filter By Location..."
@@ -102,7 +102,7 @@ const Filters = () => {
           </Form.Item>
 
           <Form.Item className="p-2 ">
-            <div>
+            <div className="w-[25vh]">
               <Select
                 placeholder="Filter By Work Type..."
                 options={[

@@ -61,7 +61,7 @@ const Jobs: React.FC<JobsProps> = ({
     <div className="flex flex-col justify-center items-center mx-auto translate-y-2 w-[90%]">
       {jobs?.length == 0 ? (
         <div className="flex flex-col justify-center items-center w-full h-full space-y-5">
-          <h1 className="text-3xl font-bold dark:text-white">"No Jobs Match Your Search."</h1>
+          <h1 className="text-3xl font-bold dark:text-white text-center">"No Jobs Match Your Search."</h1>
           <p className="text-base text-center dark:text-gray-300">
             Sorry, we couldn't find any jobs that match your search. Try
             adjusting your filters or keywords and check back later, as new
