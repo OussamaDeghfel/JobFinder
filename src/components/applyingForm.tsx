@@ -70,7 +70,7 @@ const ApplyingForm = () => {
               onFinish={handleSubmit}
             >
               <div className="flex flex-col justify-between h-full overflow-hidden">
-                <div className="flex flex-col justify-between px-20">
+                <div className="flex flex-col justify-between md:px-20">
                   <Form.Item
                     label={<span className="dark:text-white">First Name</span>}
                     name="firstname"
@@ -103,7 +103,7 @@ const ApplyingForm = () => {
                     />
                   </Form.Item>
                 </div>
-                <div className="flex px-10">
+                <div className="flex md:px-10">
                   <Form.Item
                     name="email"
                     label={<span className="dark:text-white">Email</span>}
@@ -113,7 +113,7 @@ const ApplyingForm = () => {
                         message: "Please input your Email Address!",
                       },
                     ]}
-                    className="w-full px-10"
+                    className="w-full md:px-10"
                   >
                     <Input
                       placeholder="Enter your email"
@@ -121,7 +121,7 @@ const ApplyingForm = () => {
                     />
                   </Form.Item>
                 </div>
-                <div className="flex px-10">
+                <div className="flex md:px-10">
                   <Form.Item
                     name="coverletter"
                     label={
@@ -133,7 +133,7 @@ const ApplyingForm = () => {
                         message: "Please do not exceed 200 words.",
                       },
                     ]}
-                    className="w-full h-fit px-10"
+                    className="w-full h-fit md:px-10"
                   >
                     <TextArea
                       size="large"
@@ -142,7 +142,7 @@ const ApplyingForm = () => {
                     />
                   </Form.Item>
                 </div>
-                <div className="flex px-10">
+                <div className="flex md:px-10">
                   <Form.Item
                     name="salaryrange"
                     label={
@@ -154,7 +154,7 @@ const ApplyingForm = () => {
                         message: "Please select your salary range.",
                       },
                     ]}
-                    className="w-full px-10 "
+                    className="w-full md:px-10 "
                   >
                     <Select
                       placeholder="Select your salary range"
