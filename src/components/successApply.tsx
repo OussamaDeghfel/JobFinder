@@ -7,7 +7,7 @@ interface roleType {
 
 const SuccessApply = ({role}: roleType) => {
   return (
-    <div className="flex space-y-5 flex-col w-fit h-fit justify-center items-center mx-auto dark:text-white">
+    <div className="flex space-y-5 flex-col w-fit text-center h-fit justify-center items-center mx-auto dark:text-white">
       <BiCheckDouble
         size={65}
         color="blue"
